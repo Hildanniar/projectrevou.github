@@ -1,0 +1,67 @@
+.container {
+  display: flex;
+  justify-content: flex-end;
+  padding-left: 25px;
+}
+
+.container > div {
+  padding: 10px;
+  text-align: center;
+  font-size: 14sp;
+  color: #fffbfb;
+  border: 2px solid;
+}
+
+.logo {
+  margin-right: auto;
+}
+
+.responsive {
+  width: 80%;
+  height: auto;
+  padding-left: 100px;
+}
+
+.circle {
+  border-radius: 100%;
+  padding-left: 150px;
+}
+
+.content {
+  flex-direction: row;
+  display: flex;
+}
+
+.content > div {
+  display: flex;
+  flex: 1;
+  align-content: center;
+  justify-content: center;
+}
+.bottom-links {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 40px 0;
+}
+
+.bottom-links .links {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 40px;
+}
+
+.bottom-links .links span {
+  font-size: 20px;
+  color: #fff;
+  text-transform: uppercase;
+  margin: 10px 0;
+}
+
+.bottom-links .links a {
+  text-decoration: none;
+  color: #a1a1a1;
+  padding: 10px 20px;
+}

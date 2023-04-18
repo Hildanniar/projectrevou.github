@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Website</title>
+    <link rel="stylesheet" href="header.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <nav class="container">
+      <img
+        src="https://coursereport-production.imgix.net/uploads/school/logo/1166/original/RevoU_Logo_WhiteBG.png?w=70&h=70&dpr=5&q=20"
+        class="logo"
+        width="40"
+        height="40"
+      />
+      <div class="home">
+        <a href="header.html" style="color: black; text-decoration: none"
+          >Home</a
+        >
+      </div>
+      <div class="profile">
+        <a href="profile.html" style="color: black; text-decoration: none"
+          >Our Profile</a
+        >
+      </div>
+      <div class="achievement">
+        <a href="#" style="color: black; text-decoration: none">Achievement</a>
+      </div>
+      <div class="messageUs">
+        <a href="#" style="color: black; text-decoration: none">Message Us</a>
+      </div>
+    </nav>
+    <hr />
+    <header>
+      <h1 style="padding: 30px 0px 0px 80px; margin-bottom: 10px">
+        Hi Hildanniar, Welcome To Website
+      </h1>
+      <p style="padding: 0px 10px 10px 80px; margin-bottom: 10px">
+        Ini adalah website latihan pertama
+      </p>
+      <img
+        src="img/bg.jpg"
+        alt="Nature"
+        class="responsive"
+        width="600"
+        height="400"
+      />
+    </header>
+
+    <hr />
+    <h1 style="padding: 30px 0px 0px 80px; margin-bottom: 10px">
+      Our Fasilitacion
+    </h1>
+
+    <img
+      class="circle"
+      src="img/teacher.jpg"
+      alt="Avatar"
+      style="width: 150px; height: 150px; padding: 10px 80px 0px 80px"
+    />
+    <img
+      class="circle"
+      src="img/sport_field.jpg"
+      alt="Avatar"
+      style="width: 150px; height: 150px; padding: 10px 80px 0px 80px"
+    />
+    <img
+      class="circle"
+      src="img/classroom.jpg"
+      alt="Avatar"
+      style="width: 150px; height: 150px; padding: 10px 80px 0px 80px"
+    />
+    <hr />
+    <h1 style="padding: 30px 0px 0px 80px; margin-bottom: 10px">Message Us</h1>
+
+    <main class="content">
+      <div style="padding: 10px 80px 0px 80px">
+        <form name="message-form" onsubmit="return validateForm()">
+          <table>
+            <tr>
+              <td><label>Nama </label></td>
+              <td>
+                : <input placeholder="Nama" type="text" name="full-name" />
+              </td>
+            </tr>
+            <tr>
+              <td><label>Tanggal Lahir</label></td>
+              <td>: <input type="date" name="birth-date" /></td>
+            </tr>
+            <tr>
+              <td><label>Jenis Kelamin</label></td>
+              <td>
+                : <input type="radio" id="male" name="gender" value="male" />
+                <label for="male">Laki-laki</label>
+                <input type="radio" id="female" name="gender" value="female" />
+                <label for="female">Perempuan</label>
+              </td>
+            </tr>
+            <tr>
+              <td><label>Pesan</label></td>
+              <td>
+                : <textarea placeholder="Pesan" name="messages"></textarea>
+              </td>
+            </tr>
+            <tr>
+              <td></td>
+              <td><input type="submit" value="Submit" /></td>
+            </tr>
+          </table>
+        </form>
+      </div>
+      <div style="padding: 10px 80px 0px 80px">
+        <p>Nama: <span id="sender-full-name"></span></p>
+        <p>Tanggal Lahir: <span id="sender-birth-date"></span></p>
+        <p>Jenis Kelamin: <span id="sender-gender"></span></p>
+        <p>Pesan: <span id="sender-messages"></span></p>
+      </div>
+    </main>
+    <hr />
+    <footer class="footer">
+      <div class="copy" style="text-align: end">&copy; Copyright RevoU</div>
+      <div class="bottom-links">
+        <div class="links">
+          <span>Social Links</span>
+          <a href="https://www.youtube.com/c/revoudotco"
+            ><i class="fab fa-youtube"></i
+          ></a>
+          <a href="https://twitter.com/revoudotco"
+            ><i class="fab fa-twitter"></i
+          ></a>
+          <a href="https://www.instagram.com/revou_id/"
+            ><i class="fab fa-instagram"></i
+          ></a>
+        </div>
+      </div>
+    </footer>
+    <hr />
+
+    <script>
+      function validateForm() {
+        var name = document.forms["message-form"]["full-name"].value;
+        var date = document.forms["message-form"]["birth-date"].value;
+        var gender = document.forms["message-form"]["gender"].value;
+        var messages = document.forms["message-form"]["messages"].value;
+
+        if(name == "" || date == "" || gender == "" || messages == "" |){
+          alert("Tidak boleh ada yang kosong");
+          return false;
+        }
+
+        document.getElementById["sender-full-name"].innerText = name;
+        document.getElementById["sender-birth-date"].innerText = date;
+        document.getElementById["sender-gender"].innerText = gender;
+        document.getElementById["sender-messages"].innerText = messages;
+      }
+    </script>
+  </body>
+</html>
